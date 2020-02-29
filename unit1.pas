@@ -29,18 +29,22 @@ var
 
 implementation
 
+uses DrawnControl, RetroClock;
+
 {$R *.lfm}
 
 { TForm1 }
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  AddClass(TApplication);
-  AddClass(TForm1);
-  AddClass(TPairSplitter);
-  AddClass(TPairSplitterSide);
-  AddClass(TTreeView);
-  AddClass(TList);
+  AddClass(TRetroClock);
+  AddClass(TClockScaleLines);
+  AddClass(TClockScale);
+  AddClass(TClock);
+  AddClass(TLine);
+  AddClass(TRotativePointer);
+  AddClass(TWSRectangle);
+  AddClass(TCircle);
   TreeView.FullExpand;
 end;
 

@@ -1,12 +1,13 @@
 object Form1: TForm1
-  Left = 646
+  Left = 670
   Height = 368
-  Top = 247
+  Top = 270
   Width = 469
   Caption = 'Class Chart'
   ClientHeight = 368
   ClientWidth = 469
   OnCreate = FormCreate
+  Position = poDefault
   LCLVersion = '2.0.6.0'
   object PairSplitter1: TPairSplitter
     Left = 0
@@ -14,6 +15,7 @@ object Form1: TForm1
     Top = 0
     Width = 469
     Align = alClient
+    BorderSpacing.InnerBorder = 4
     Position = 176
     object PairSplitterSide1: TPairSplitterSide
       Cursor = crArrow
