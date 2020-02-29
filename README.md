@@ -1,4 +1,4 @@
-# ClassChart
+# Class Chart
 
 application to view a class inheritance tree containing the selected classes and their ancestors only
 
