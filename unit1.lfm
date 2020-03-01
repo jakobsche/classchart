@@ -1,11 +1,12 @@
 object Form1: TForm1
-  Left = 670
+  Left = 596
   Height = 368
-  Top = 270
+  Top = 227
   Width = 469
   Caption = 'Class Chart'
   ClientHeight = 368
   ClientWidth = 469
+  Menu = MainMenu1
   OnCreate = FormCreate
   Position = poDefault
   LCLVersion = '2.0.6.0'
@@ -16,30 +17,49 @@ object Form1: TForm1
     Width = 469
     Align = alClient
     BorderSpacing.InnerBorder = 4
-    Position = 176
+    Position = 200
     object PairSplitterSide1: TPairSplitterSide
       Cursor = crArrow
       Left = 0
       Height = 368
       Top = 0
-      Width = 176
-      ClientWidth = 176
+      Width = 200
+      ClientWidth = 200
       ClientHeight = 368
       object TreeView: TTreeView
         Left = 0
         Height = 368
         Top = 0
-        Width = 176
+        Width = 200
         Align = alClient
+        ReadOnly = True
         TabOrder = 0
+        Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
       end
     end
     object PairSplitterSide2: TPairSplitterSide
       Cursor = crArrow
-      Left = 181
+      Left = 205
       Height = 368
       Top = 0
-      Width = 288
+      Width = 264
     end
+  end
+  object MainMenu1: TMainMenu
+    left = 224
+    top = 104
+    object MenuItem1: TMenuItem
+      Caption = '&Suchen'
+      ShortCut = 4166
+      OnClick = MenuItem1Click
+    end
+  end
+  object FindDialog: TFindDialog
+    OnCanClose = FindDialogCanClose
+    Title = 'Klasse suchen'
+    Options = [frHideMatchCase, frHideWholeWord, frHideUpDown, frShowHelp, frHideEntireScope, frHidePromptOnReplace]
+    OnFind = FindDialogFind
+    left = 225
+    top = 38
   end
 end
