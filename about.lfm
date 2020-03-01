@@ -1,0 +1,78 @@
+object AboutBox: TAboutBox
+  Left = 779
+  Height = 339
+  Top = 312
+  Width = 442
+  BorderStyle = bsDialog
+  BorderWidth = 4
+  Caption = 'Über Class Chart'
+  ClientHeight = 339
+  ClientWidth = 442
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.0.6.0'
+  object StaticText1: TStaticText
+    Left = 16
+    Height = 24
+    Top = 8
+    Width = 408
+    Caption = 'Anzeigen von Klassen und ihrer Vererbungsstruktur'
+    Font.Height = -16
+    ParentFont = False
+    TabOrder = 0
+  end
+  object StaticText2: TStaticText
+    Left = 16
+    Height = 17
+    Top = 40
+    Width = 408
+    Caption = 'Version 0'
+    TabOrder = 1
+  end
+  object StaticText3: TStaticText
+    Left = 16
+    Height = 17
+    Top = 72
+    Width = 408
+    Caption = 'Copyright 2020 Andreas Jakobsche'
+    TabOrder = 2
+  end
+  object BitBtn1: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 104
+    Width = 75
+    Caption = '&EMail'
+    OnClick = BitBtn1Click
+    TabOrder = 3
+  end
+  object BitBtn2: TBitBtn
+    Left = 96
+    Height = 30
+    Top = 104
+    Width = 136
+    Action = Form1.LicenseAction
+    TabOrder = 4
+  end
+  object OKBtn: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 301
+    Width = 91
+    Anchors = [akLeft, akBottom]
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 5
+  end
+  object BitBtn4: TBitBtn
+    Left = 240
+    Height = 30
+    Top = 104
+    Width = 88
+    Caption = '&Quelltext'
+    OnClick = BitBtn4Click
+    TabOrder = 6
+  end
+end

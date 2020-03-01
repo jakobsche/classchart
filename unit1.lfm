@@ -17,49 +17,104 @@ object Form1: TForm1
     Width = 469
     Align = alClient
     BorderSpacing.InnerBorder = 4
-    Position = 200
+    Position = 300
     object PairSplitterSide1: TPairSplitterSide
       Cursor = crArrow
       Left = 0
       Height = 368
       Top = 0
-      Width = 200
-      ClientWidth = 200
+      Width = 300
+      ClientWidth = 300
       ClientHeight = 368
       object TreeView: TTreeView
         Left = 0
         Height = 368
         Top = 0
-        Width = 200
+        Width = 300
         Align = alClient
         ReadOnly = True
         TabOrder = 0
+        OnSelectionChanged = TreeViewSelectionChanged
         Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
       end
     end
     object PairSplitterSide2: TPairSplitterSide
       Cursor = crArrow
-      Left = 205
+      Left = 305
       Height = 368
       Top = 0
-      Width = 264
+      Width = 164
+      ClientWidth = 164
+      ClientHeight = 368
+      object StaticText1: TStaticText
+        Left = 8
+        Height = 17
+        Top = 8
+        Width = 70
+        AutoSize = True
+        Caption = 'StaticText1'
+        Font.Style = [fsBold, fsUnderline]
+        ParentFont = False
+        TabOrder = 0
+      end
     end
   end
   object MainMenu1: TMainMenu
-    left = 224
-    top = 104
+    left = 72
+    top = 176
     object MenuItem1: TMenuItem
-      Caption = '&Suchen'
-      ShortCut = 4166
-      OnClick = MenuItem1Click
+      Action = FindAction
+    end
+    object MenuItem3: TMenuItem
+      Caption = '&Hilfe'
+      object MenuItem4: TMenuItem
+        Caption = 'Hilfeinhalte'
+        ShortCut = 112
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Hilfe-&Index'
+      end
+      object MenuItem6: TMenuItem
+        Caption = '&Onlinehilfe'
+      end
+      object MenuItem7: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem8: TMenuItem
+        Action = LicenseAction
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Na&ch Updates suchen'
+      end
+      object MenuItem10: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem11: TMenuItem
+        Action = AboutAction
+      end
+    end
+  end
+  object ActionList1: TActionList
+    left = 152
+    top = 224
+    object FindAction: TAction
+      Caption = '&Suchen ...'
+      OnExecute = FindActionExecute
+    end
+    object AboutAction: TAction
+      Caption = '&Über ...'
+      OnExecute = AboutActionExecute
+    end
+    object LicenseAction: TAction
+      Caption = '&Lizenzinformation'
+      OnExecute = LicenseActionExecute
     end
   end
   object FindDialog: TFindDialog
-    OnCanClose = FindDialogCanClose
     Title = 'Klasse suchen'
-    Options = [frHideMatchCase, frHideWholeWord, frHideUpDown, frShowHelp, frHideEntireScope, frHidePromptOnReplace]
+    Options = [frHideMatchCase, frHideWholeWord, frHideUpDown, frHideEntireScope, frHidePromptOnReplace]
     OnFind = FindDialogFind
-    left = 225
-    top = 38
+    left = 72
+    top = 232
   end
 end
