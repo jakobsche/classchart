@@ -36,13 +36,9 @@ type
     TreeView: TTreeView;
     procedure AboutActionExecute(Sender: TObject);
     procedure FindActionExecute(Sender: TObject);
-    procedure FindDialogCanClose(Sender: TObject; var CanClose: boolean);
     procedure FindDialogFind(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure LicenseActionExecute(Sender: TObject);
-    procedure MenuItem1Click(Sender: TObject);
-    procedure SearchFindAccept(Sender: TObject);
-    procedure SearchFindUpdate(Sender: TObject);
     procedure TreeViewSelectionChanged(Sender: TObject);
   private
 
@@ -57,7 +53,7 @@ implementation
 
 uses About, LCLIntf,
 { Units declaring the classes to explore }
-  BinPropStorage, ChipTemp, {DCF77,} DrawnControl, DTV, DynArray, EvMsg,
+  BinPropStorage, ChipTemp, {DCF77,} DOM, DrawnControl, DTV, DynArray, EvMsg,
   FIFORAM, GPIO, LangMenu,
   LEDView, MasterFm,
   NewtonsMethod, PathView, PresEdit, Retain, RetroClock, SinusGenerator,
@@ -155,11 +151,6 @@ begin
   else ShowMessageFmt('Klasse "%s" nicht gefunden', [(Sender as TFindDialog).FindText])
 end;
 
-procedure TForm1.FindDialogCanClose(Sender: TObject; var CanClose: boolean);
-begin
-
-end;
-
 procedure TForm1.FindActionExecute(Sender: TObject);
 begin
   FindDialog.Execute
@@ -168,21 +159,6 @@ end;
 procedure TForm1.AboutActionExecute(Sender: TObject);
 begin
   AboutBox.ShowModal
-end;
-
-procedure TForm1.MenuItem1Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.SearchFindAccept(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.SearchFindUpdate(Sender: TObject);
-begin
-
 end;
 
 procedure TForm1.TreeViewSelectionChanged(Sender: TObject);
