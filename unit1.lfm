@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 596
+  Left = 764
   Height = 368
-  Top = 227
+  Top = 187
   Width = 469
   Caption = 'Class Chart'
-  ClientHeight = 368
+  ClientHeight = 349
   ClientWidth = 469
   Menu = MainMenu1
   OnCreate = FormCreate
@@ -12,7 +12,7 @@ object Form1: TForm1
   LCLVersion = '2.0.6.0'
   object PairSplitter1: TPairSplitter
     Left = 0
-    Height = 368
+    Height = 349
     Top = 0
     Width = 469
     Align = alClient
@@ -21,14 +21,14 @@ object Form1: TForm1
     object PairSplitterSide1: TPairSplitterSide
       Cursor = crArrow
       Left = 0
-      Height = 368
+      Height = 349
       Top = 0
       Width = 300
       ClientWidth = 300
-      ClientHeight = 368
+      ClientHeight = 349
       object TreeView: TTreeView
         Left = 0
-        Height = 368
+        Height = 349
         Top = 0
         Width = 300
         Align = alClient
@@ -41,16 +41,16 @@ object Form1: TForm1
     object PairSplitterSide2: TPairSplitterSide
       Cursor = crArrow
       Left = 305
-      Height = 368
+      Height = 349
       Top = 0
       Width = 164
       ClientWidth = 164
-      ClientHeight = 368
+      ClientHeight = 349
       object StaticText1: TStaticText
         Left = 8
-        Height = 17
+        Height = 14
         Top = 8
-        Width = 70
+        Width = 67
         AutoSize = True
         Caption = 'StaticText1'
         Font.Style = [fsBold, fsUnderline]

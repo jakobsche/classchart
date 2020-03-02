@@ -139,7 +139,7 @@ procedure TForm1.LicenseActionExecute(Sender: TObject);
 var
   FileName: string;
 begin
-  FileName := ExtractfilePath(Application.ExeName) + 'LICENSE';
+  FileName := ExtractfilePath(Application.ExeName) + 'LICENSE.txt';
   if not OpenDocument(FileName) then
     ShowMessageFmt('"%s" nicht gefunden', [FileName]);
 end;

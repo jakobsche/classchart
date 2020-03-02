@@ -1,3 +1,5 @@
 backup
 lib
 .DS_Store
+.directory
+deploy/*/classchart
