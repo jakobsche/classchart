@@ -1,61 +1,124 @@
 object Form1: TForm1
   Left = 764
-  Height = 368
+  Height = 383
   Top = 187
   Width = 469
   Caption = 'Class Chart'
-  ClientHeight = 368
+  ClientHeight = 383
   ClientWidth = 469
   Menu = MainMenu1
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   Position = poDefault
   LCLVersion = '2.0.6.0'
-  object PairSplitter1: TPairSplitter
+  object PageControl1: TPageControl
     Left = 0
-    Height = 368
+    Height = 383
     Top = 0
     Width = 469
+    ActivePage = InheritanceSheet
     Align = alClient
-    BorderSpacing.InnerBorder = 4
-    Position = 300
-    object PairSplitterSide1: TPairSplitterSide
-      Cursor = crArrow
-      Left = 0
-      Height = 368
-      Top = 0
-      Width = 300
-      ClientWidth = 300
-      ClientHeight = 368
-      object TreeView: TTreeView
+    TabIndex = 0
+    TabOrder = 0
+    object InheritanceSheet: TTabSheet
+      Caption = 'Vererbung'
+      ClientHeight = 353
+      ClientWidth = 463
+      object PairSplitter1: TPairSplitter
         Left = 0
-        Height = 368
+        Height = 353
         Top = 0
-        Width = 300
+        Width = 463
         Align = alClient
-        ReadOnly = True
-        TabOrder = 0
-        OnSelectionChanged = TreeViewSelectionChanged
-        Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+        BorderSpacing.InnerBorder = 4
+        Position = 300
+        object PairSplitterSide1: TPairSplitterSide
+          Cursor = crArrow
+          Left = 0
+          Height = 353
+          Top = 0
+          Width = 300
+          ClientWidth = 300
+          ClientHeight = 353
+          object ClassTreeView: TTreeView
+            Left = 0
+            Height = 353
+            Top = 0
+            Width = 300
+            Align = alClient
+            ReadOnly = True
+            TabOrder = 0
+            OnSelectionChanged = ClassTreeViewSelectionChanged
+            Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+          end
+        end
+        object PairSplitterSide2: TPairSplitterSide
+          Cursor = crArrow
+          Left = 305
+          Height = 353
+          Top = 0
+          Width = 158
+          ClientWidth = 158
+          ClientHeight = 353
+          object StaticText1: TStaticText
+            Left = 8
+            Height = 17
+            Top = 8
+            Width = 90
+            AutoSize = True
+            Caption = 'Unit <Name>'
+            Font.Style = [fsBold, fsUnderline]
+            ParentFont = False
+            TabOrder = 0
+          end
+          object StaticText2: TStaticText
+            Left = 8
+            Height = 16
+            Top = 32
+            Width = 104
+            AutoSize = True
+            Caption = 'Package <Name>'
+            ParentFont = False
+            TabOrder = 1
+          end
+        end
       end
     end
-    object PairSplitterSide2: TPairSplitterSide
-      Cursor = crArrow
-      Left = 305
-      Height = 368
-      Top = 0
-      Width = 164
-      ClientWidth = 164
-      ClientHeight = 368
-      object StaticText1: TStaticText
-        Left = 8
-        Height = 17
-        Top = 8
-        Width = 76
-        AutoSize = True
-        Caption = 'StaticText1'
-        Font.Style = [fsBold, fsUnderline]
-        ParentFont = False
-        TabOrder = 0
+    object PackageSheet: TTabSheet
+      Caption = 'Packages'
+      ClientHeight = 353
+      ClientWidth = 463
+      object PairSplitter2: TPairSplitter
+        Left = 0
+        Height = 353
+        Top = 0
+        Width = 463
+        Align = alClient
+        Position = 288
+        object PairSplitterSide3: TPairSplitterSide
+          Cursor = crArrow
+          Left = 0
+          Height = 353
+          Top = 0
+          Width = 288
+          ClientWidth = 288
+          ClientHeight = 353
+          object PackageTreeView: TTreeView
+            Left = 0
+            Height = 353
+            Top = 0
+            Width = 288
+            Align = alClient
+            TabOrder = 0
+          end
+        end
+        object PairSplitterSide4: TPairSplitterSide
+          Cursor = crArrow
+          Left = 293
+          Height = 353
+          Top = 0
+          Width = 170
+        end
       end
     end
   end

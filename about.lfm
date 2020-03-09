@@ -26,7 +26,7 @@ object AboutBox: TAboutBox
     Height = 17
     Top = 40
     Width = 408
-    Caption = 'Version 0'
+    Caption = 'Version 1'
     TabOrder = 1
   end
   object StaticText3: TStaticText
