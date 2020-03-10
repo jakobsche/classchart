@@ -1,7 +1,7 @@
 object AboutBox: TAboutBox
-  Left = 779
+  Left = 495
   Height = 339
-  Top = 312
+  Top = 132
   Width = 442
   BorderStyle = bsDialog
   BorderWidth = 4
